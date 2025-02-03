@@ -178,28 +178,3 @@ h3 {
     font-weight: 600;
     margin-bottom: 0.375rem;
 }
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #000;
-        color: #fff;
-    }
-
-    .card {
-        background-color: #1c1c1e;
-    }
-
-    code {
-        background-color: #2c2c2e;
-    }
-
-    .test-case {
-        background-color: #2c2c2e;
-    }
-
-    .btn-secondary {
-        background-color: #2c2c2e;
-        color: #fff;
-    }
-}
