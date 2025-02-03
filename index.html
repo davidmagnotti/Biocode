@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biocode</title>
+    
+    <!-- Core Dependencies -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Python Environment -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    
+    <!-- CodeMirror Editor -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+    
+    <!-- Utilities -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    
+    <!-- Application Files -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="components.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="biocode_problems.js"></script>
+</head>
+<body class="min-h-screen">
+    <div class="main-container">
+        <div id="reactRoot"></div>
+        <div id="editorSection" class="mt-6">
+            <div id="questionDisplay"></div>
+            <div class="rounded-lg shadow-sm p-6 mt-4">
+                <textarea id="codeEditor"></textarea>
+                <div class="flex gap-3 mt-4">
+                    <button onclick="checkAnswer()" class="btn btn-primary">Submit</button>
+                    <button onclick="selectRandomQuestion()" class="btn btn-secondary">Try Different Problem</button>
+                    <button onclick="resetProgress()" class="btn btn-secondary">Reset Progress</button>
+                </div>
+            </div>
+            <div class="rounded-lg shadow-sm p-6 mt-4">
+                <div id="result" class="mt-4"></div>
+                <div id="testCases" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
