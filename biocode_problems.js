@@ -50,13 +50,13 @@ const questions = [
   {
     "id": 3,
     "title": "Reverse Complement",
-    "description": "Write a function that returns the reverse complement of a DNA sequence. In DNA, A pairs with T, and C pairs with G. The reverse complement is important in DNA replication and PCR primer design. For example, the reverse complement of 'ATCG' is 'CGAT'.",
+    "description": "Write a function that returns the reverse complement of a DNA sequence. In DNA, A pairs with T, and C pairs with G. The reverse complement is important in DNA replication and PCR primer design. For example, the reverse complement of 'ATCG' is 'TAGC'.",
     "starterCode": "def reverse_complement(sequence):\n    return None",
     "example": "reverse_complement(\"ATCG\") == \"CGAT\"",
     "testCases": [
       {
         "input": "ATCG",
-        "expected": "CGAT",
+        "expected": "TAGC",
         "code": "print(reverse_complement(\"ATCG\"))"
       },
       {
@@ -66,7 +66,7 @@ const questions = [
       },
       {
         "input": "GATTACA",
-        "expected": "TGTAATC",
+        "expected": "CTAATGT",
         "code": "print(reverse_complement(\"GATTACA\"))"
       }
     ]
